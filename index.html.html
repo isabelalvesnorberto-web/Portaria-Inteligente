@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portaria Inteligente - Consultoria, Treinamento e Suporte</title>
+<style>
+  :root{
+    --primary:#0b63a8;
+    --accent:#00b894;
+    --muted:#6b7280;
+    --card:#ffffff;
+    --bg:#f5f7fb;
+    --radius:12px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+  .wrap{max-width:1100px;margin:36px auto;padding:0 20px}
+  header.hero{
+    background:linear-gradient(180deg, rgba(11,99,168,0.95), rgba(6,84,143,0.95));
+    color:#fff;border-radius:16px;padding:44px 28px;box-shadow:0 8px 30px rgba(4,40,71,0.12);
+  }
+  .hero-grid{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+  .hero-left{flex:1;min-width:260px}
+  .hero-left h1{margin:0;font-size:28px;line-height:1.05}
+  .hero-left p{color:rgba(255,255,255,0.92);margin:14px 0 0}
+  .cta-row{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+  .btn-primary{background:#fff;color:var(--primary)}
+  .btn-ghost{background:transparent;border:2px solid rgba(255,255,255,0.16);color:#fff}
+  .hero-right{width:320px;min-width:240px;border-radius:12px;background:rgba(255,255,255,0.06);padding:18px}
+  .badge{display:inline-block;background:rgba(255,255,255,0.08);padding:6px 10px;border-radius:999px;font-size:13px}
+  /* Services */
+  section.services{margin-top:26px}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(11,20,40,0.04);border:1px solid rgba(15,23,42,0.03)}
+  .card h3{margin:0 0 8px;font-size:18px}
+  .card p{margin:0;color:var(--muted)}
+  .card .icon{font-size:22px;margin-right:10px}
+  /* Benefits */
+  .benefits{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+  .benefit{flex:1;min-width:180px;background:linear-gradient(180deg,#fff,#f8fbff);padding:14px;border-radius:10px;border:1px solid rgba(11,99,168,0.06)}
+  .muted{color:var(--muted)}
+  /* Projects */
+  section.projects{margin-top:30px}
+  .project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .project{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:14px;border-radius:10px;border:1px solid rgba(11,99,168,0.04)}
+  /* Footer */
+  footer{margin:36px 0 80px;text-align:center;color:var(--muted);font-size:14px}
+  /* WhatsApp floating */
+  .whats{
+    position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;border-radius:999px;padding:14px 16px;
+    box-shadow:0 8px 26px rgba(0,0,0,0.18);font-weight:700;text-decoration:none;display:flex;align-items:center;gap:10px;z-index:9999
+  }
+  .whats small{font-size:12px;opacity:0.95}
+  /* Responsive tweaks */
+  @media (max-width:720px){
+    .hero-grid{flex-direction:column}
+    .hero-right{width:100%}
+    .cta-row{flex-direction:column;align-items:stretch}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero" role="banner" aria-label="Hero section">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="badge">Solução de Controle de Acesso</span>
+          <h1>Portaria inteligente com reconhecimento facial</h1>
+          <p>Consultoria, implantação, treinamento e suporte para modernizar o controle de acesso de condomínios e empresas com segurança e eficiência.</p>
+          <div class="cta-row" role="navigation">
+            <a class="btn btn-primary" href="mailto:contato@portariainteligente.com">Solicitar demonstração</a>
+            <a class="btn btn-ghost" href="#services">Nossos serviços</a>
+          </div>
+          <div style="margin-top:16px;color:var(--muted);font-size:14px">
+            <strong>Preço referência:</strong> R$800/mês por ponto (plano básico)
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-hidden="false">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-weight:700">FG</div>
+            <div>
+              <div style="font-weight:700">Projeto-piloto incluso</div>
+              <div style="color:var(--muted);font-size:14px;margin-top:6px">Validação em campo antes da implantação completa</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="services" aria-labelledby="services-title">
+      <h2 style="margin-top:22px">Nossos serviços</h2>
+      <div class="services-grid" role="list">
+        <!-- Consultoria -->
+        <article class="card" role="listitem" aria-label="Consultoria técnica">
+          <h3><span class="icon">🛠️</span>Consultoria Técnica</h3>
+          <p>Diagnóstico do ambiente, definição de arquitetura, planejamento de implantação e suporte na escolha de equipamentos e integrações.</p>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Pacote: R$ 3.000 (referência)</div>
+        </article>
+
+        <!-- Treinamento -->
+        <article class="card" role="listitem" aria-label="Treinamento e capacitação">
+          <h3><span class="icon">🎓</span>Treinamento e Capacitação</h3>
+          <p>Capacitação de equipes de portaria e gestores para operação correta do sistema, fluxos de segurança e rotinas de contingência.</p>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Pacote: R$ 2.500 (referência)</div>
+        </article>
+
+        <!-- Manutenção -->
+        <article class="card" role="listitem" aria-label="Manutenção e suporte">
+          <h3><span class="icon">🔧</span>Manutenção e Suporte</h3>
+          <p>Suporte remoto, atualizações, monitoramento e visitas técnicas para garantir disponibilidade e performance contínua.</p>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">R$ 150 / ponto / mês (referência)</div>
+        </article>
+      </div>
+
+      <div class="benefits" aria-hidden="false" style="margin-top:18px">
+        <div class="benefit">
+          <strong>🔒 Segurança em primeiro lugar</strong>
+          <div class="muted" style="margin-top:6px">Redução de fraudes e logs auditáveis.</div>
+        </div>
+        <div class="benefit">
+          <strong>⚡ Fluxo acelerado</strong>
+          <div class="muted" style="margin-top:6px">Menos filas e processos mais rápidos na portaria.</div>
+        </div>
+        <div class="benefit">
+          <strong>🤝 Suporte dedicado</strong>
+          <div class="muted" style="margin-top:6px">Equipe técnica e SLA sob contrato.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / Pilots -->
+    <section class="projects" aria-labelledby="projects-title">
+      <h2 style="margin-top:26px">Projetos-piloto</h2>
+      <p class="muted">Validamos em ambientes reais para ajustar parâmetros, iluminação e políticas de acesso antes da entrega final.</p>
+      <div class="project-list" style="margin-top:12px">
+        <div class="project">
+          <strong>Condomínio Alpha</strong>
+          <div class="muted" style="margin-top:8px">Redução de 40% no tempo médio de entrada e integração com sistema de portaria existente.</div>
+        </div>
+        <div class="project">
+          <strong>Edifício Beta</strong>
+          <div class="muted" style="margin-top:8px">Projeto-piloto com 3 pontos de acesso e monitoramento remoto durante 30 dias.</div>
+        </div>
+        <div class="project">
+          <strong>Campus Gamma</strong>
+          <div class="muted" style="margin-top:8px">Testes com diferentes condições de iluminação e uso de máscara.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Contact -->
+    <section style="margin-top:26px;display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
+      <div class="card">
+        <h3>Quem somos</h3>
+        <p>Equipe técnica especializada em biometria e integração de sistemas. Criamos metodologia própria e atuamos com foco em operação e experiência do usuário.</p>
+        <p style="margin-top:12px"><strong>Garantia:</strong> acompanhamento do piloto e suporte inicial incluso.</p>
+      </div>
+
+      <aside class="card" aria-label="Contato">
+        <h3>Contato</h3>
+        <p class="muted">Fale conosco para agendar demonstração ou solicitar proposta.</p>
+        <p style="margin-top:8px"><strong>Email:</strong> contato@portariainteligente.com</p>
+        <p style="margin-top:6px"><strong>Tel:</strong> (11) 99999-9999</p>
+        <a class="btn" href="mailto:contato@portariainteligente.com" style="margin-top:12px;background:var(--primary);color:#fff;border-radius:10px;padding:10px 12px;display:inline-block">Enviar email</a>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="muted">© 2025 - Portaria Inteligente. Todos os direitos reservados.</div>
+    </footer>
+  </div>
+
+  <!-- WhatsApp floating: substitua SEUNUMERO por DDI + DDD + número, ex: 5511999999999 -->
+  <a class="whats" href="https://wa.me/SEUNUMERO" target="_blank" aria-label="Abrir WhatsApp">
+    💬 <span style="font-weight:700">WhatsApp</span>
+    <small style="display:block;opacity:0.9">Clique para falar</small>
+  </a>
+</body>
+</html>
